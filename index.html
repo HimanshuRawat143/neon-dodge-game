@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Neon Dodge - Arcade</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="brand">NEON DODGE</div>
+      <div class="stats">
+        <div class="stat"><span>Score</span><strong id="score">0</strong></div>
+        <div class="stat"><span>Best</span><strong id="best">0</strong></div>
+        <button id="pauseBtn" class="btn">Pause</button>
+        <button id="restartBtn" class="btn primary">Restart</button>
+      </div>
+    </header>
+
+    <main class="stage-wrap">
+      <canvas id="game"></canvas>
+
+      <div id="overlay" class="overlay hidden">
+        <div class="panel">
+          <h1 id="overlayTitle">Neon Dodge</h1>
+          <p id="overlayMessage">Use WASD or Arrow Keys to move. Avoid everything. Survive to score!</p>
+          <div class="actions">
+            <button id="playBtn" class="btn primary large">Play</button>
+          </div>
+          <div class="tips">
+            <p><strong>Controls</strong></p>
+            <ul>
+              <li>Move: WASD / Arrow Keys</li>
+              <li>Pause/Resume: P</li>
+              <li>Restart: R</li>
+              <li>Touch: Drag joystick bottom-left</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="touchControls" class="touch-controls">
+        <div id="joystick" class="joystick">
+          <div id="stick" class="stick"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span>Built with HTML, CSS and JavaScript • Neon theme</span>
+      <a href="#" id="howToLink">How to play</a>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
